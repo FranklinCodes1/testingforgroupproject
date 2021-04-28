@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <title>On The Way</title>
+    </head>
+
+    <head>
+
+      <div>
+         <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+          </div>
+         
+
+       <title>Mapping Interesting Application Additions Using the Google Maps API</title>
+
+       <style style="justify-content: left; flex: shrink 0;min-width: 30%;"   type="text/css">
+
+
+
+          html { height: 75%; min-width: 30%;}
+
+          
+
+          body { height: 75%;min-width: 30%; margin: 10px; padding: 15px }
+
+          #MapCanvas { height: 100%;min-width: 30% }
+
+       </style>
+
+       <script type="text/javascript"
+
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDmE31Xm056eYXMjfcQxw16Ucb9aH4KZk">
+
+       </script>
+
+       <script type="text/javascript">
+
+          function GetMap() {
+
+             var Latitude = document.getElementById("latitude").value;
+
+             var Longitude = document.getElementById("longitude").value;
+
+             var mapOptions = {
+
+                center: new google.maps.LatLng(Latitude, Longitude),
+
+                zoom: 8,
+
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+
+             }
+
+             var map = new google.maps.Map(document.getElementById("MapCanvas"),
+
+             mapOptions);
+
+          }
+
+       </script>
+
+       </div>
+
+    </head>
+
+    <body onload="GetMap()">
+
+       <h1 style="text-align:center;color: lightblue;">On The Way</h1>
+
+       <div id="Input" style="width:100%; height:10%; padding-left:15px;">
+
+          Longitude: <input id="longitude" value="-87.95" type="text" />
+
+          Latitude: <input id="latitude" value="43.04" type="text" />
+
+          <input id="submit" value="Get Map" type="button" onclick="GetMap()" />
+
+       </div>
+
+       <div id="MapCanvas" style="width:100%; height:90%"></div>
+
+    </body>
+
+ </html>
